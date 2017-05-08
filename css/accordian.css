@@ -1,0 +1,48 @@
+/* The Magic */
+.accordion:hover .accordion-item:hover .accordion-item-content,
+.accordion .accordion-item--default .accordion-item-content {
+    height: 340px;
+    padding-top: 30px;
+    display: flex;
+}
+
+.accordion-item-content,
+.accordion:hover .accordion-item-content {
+    height: 0;
+    overflow: hidden;
+    transition: height .5s;
+}
+
+/* Aesthetic */
+
+.accordion {
+    padding: 0;
+    margin: 60px auto;
+    width: 1100px;
+}
+
+.accordion .accordion-item {
+ 
+  border-bottom: 1px solid #666;
+  padding: 1em;
+}
+
+.accordion h1 {
+  margin: 0;
+}
+
+.accordion p{
+  padding-right: 32px; 
+}
+
+@media only screen and (max-width: 768px) {
+  .accordion {
+    width: 700px;
+}
+}
+
+@media only screen and (max-width: 425px) {
+  .accordion{
+    width: 100%;
+  }
+}
