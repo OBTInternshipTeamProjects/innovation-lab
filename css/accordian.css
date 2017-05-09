@@ -68,3 +68,7 @@
   font-size: large;
   font-weight: normal;
 }
+@font-face {
+  font-family: fontawesome;
+  src: url(../fonts/fontawesome.ttf);
+}
