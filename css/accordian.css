@@ -1,48 +1,70 @@
-/* The Magic */
-.accordion:hover .accordion-item:hover .accordion-item-content,
-.accordion .accordion-item--default .accordion-item-content {
-    height: 340px;
-    padding-top: 30px;
-    display: flex;
-}
-
-.accordion-item-content,
-.accordion:hover .accordion-item-content {
-    height: 0;
-    overflow: hidden;
-    transition: height .5s;
-}
-
-/* Aesthetic */
-
-.accordion {
-    padding: 0;
-    margin: 60px auto;
-    width: 1100px;
-}
-
-.accordion .accordion-item {
- 
-  border-bottom: 1px solid #666;
-  padding: 1em;
-}
-
-.accordion h1 {
+* {
   margin: 0;
+  padding: 0;
 }
 
-.accordion p{
-  padding-right: 32px; 
+*, *:before, *:after {
+  box-sizing: border-box;
 }
 
-@media only screen and (max-width: 768px) {
-  .accordion {
-    width: 700px;
-}
+
+.accordion{
+	transform: translateZ(0);
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  background: #fff;
 }
 
-@media only screen and (max-width: 425px) {
-  .accordion{
-    width: 100%;
-  }
+.accordion > .accordion-toggle{
+	position: absolute;
+	opacity: 0;
+	display: none;
+}
+
+.accordion > label{
+	position: relative;
+	display: block;
+	height: 50px;
+	line-height: 50px;
+	padding: 0 20px;
+	border-top: 1px solid black;
+	background: antiquewhite;
+	cursor: pointer;
+}
+.accordion section img {
+  position: relative;
+  left: 35%;
+}
+
+.accordion > label:after {
+  content: '\f078';
+  position: absolute;
+  top: 0px;
+  right: 20px;
+  font-family: fontawesome;
+  transform: rotate(90deg);
+  transition: .3s transform;
+}
+
+.accordion > section{
+	height: 0;
+	transition: .3s all;
+	overflow: hidden;
+}
+
+.accordion > .accordion-toggle:checked ~ label:after{
+ transform: rotate(0deg);
+}
+
+.accordion > .accordion-toggle:checked ~ section{
+  height: 100%;
+}
+
+.accordion > section p {
+  margin: 15px 0;
+  padding: 0 20px;
+  line-height: 1.5;
+}
+.accordion p {
+  font-size: large;
+  font-weight: normal;
 }
