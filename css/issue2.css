@@ -1,19 +1,37 @@
+/* TEXT and TYPE */
 
+h1{
+	letter-spacing: 9px;
+  text-transform: uppercase;
+  font-size: 30px;
+  text-align:center;
+  margin:auto;
+}
 
-#innolab,#indcity{
-  display:inline-block;
+h2{
+  letter-spacing: 9px;
+  text-transform: uppercase;
+  font-size: 24px;
+  text-align:center;
+  margin:auto;
+}
+p{
+  font-size: 18px;
+  line-height: 32px;
+  font-weight: bold;
+  margin: auto;
+  text-align:justify;
 }
 
 #innolab p, #indcity p{
 	width: 1100px;
 }
-
-#indcity{
-  border:top bottom 3px #EDEDED;
-  margin: 60px 0 60px 0;
-	text-align: center;
-	background-color: rgba(255,255,255,.5);
+.parent p{
+  text-align:justify;
+  font-size: 16px;
 }
+
+/* INNOLAB + INDUSTRY CITY*/
 
 #lab{
 	background: url(../images/idk.jpg) no-repeat center center fixed;
@@ -25,38 +43,21 @@
   height:450px;
 }
 
-
-#list-container{
-  display:flex;
-  align-items: stretch;
-  height: 500 px
-  margin: 0 auto;
+#innolab,#indcity{
+  display:inline-block;
+  border-bottom: 1px solid black;
+  padding: 30px;
 }
 
-.list-item{
+#indcity{
+  border:top bottom 3px #EDEDED;
+  margin: 60px 0 60px 0;
 	text-align: center;
-	padding: 40px;
-	height: auto;
-  width:200 px;
-  background-color: #EDEDED;
-  padding:10px;
-}
-.list-item h1{
-	font-size: 20px;
-	margin-bottom: 40px;
-	letter-spacing: 9px;
-}
-.list {
-    position:flex;
-    flex: 1;
+	background-color: rgba(255,255,255,.5);
 }
 
-@media only screen and (max-width: 425px) {
-  .list{
-		width: 300px;
-		left: 50px
-	}
-}
+
+/* PARTNERS */
 
 .logos {
   padding:25px;
@@ -72,14 +73,44 @@
   }
 }
 
-.accordion-item.logo{
-  float:center;
+/* FIN SUPPORT + COLLABORATIONS */
+
+.family{
+  display:flex;
+  margin: 0 auto;
+  background-color:#EDEDED;
+  flex-direction:row;
+  align-items: stretch;
+  background-color:#EDEDED;
+  margin:space-between;
 }
 
-.accordion-item h1{
-  text-align:center;
+.parent-a{
+  flex: 1;
+  padding: 15px;
+  margin-bottom: 15px;
+  margin-top:15px;
+  background-color:#EDEDED;
 }
 
-.accordion-item p{
-  text-align:justify;
+.parent-b{
+  display:flex;
+  flex:2;
+  padding: 15px;
+  margin-bottom: 15px;
+  margin-top:15px;
+  background-color:#EDEDED;
+  border-left: 1px solid black;
+}
+
+.child-a{
+  flex:1;
+  padding: 10px;
+  background-color:#EDEDED;
+}
+
+.child-b{
+  flex:1;
+  padding: 10px;
+  background-color:#EDEDED;
 }
