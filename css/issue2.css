@@ -1,0 +1,116 @@
+/* TEXT and TYPE */
+
+h1{
+	letter-spacing: 9px;
+  text-transform: uppercase;
+  font-size: 30px;
+  text-align:center;
+  margin:auto;
+}
+
+h2{
+  letter-spacing: 9px;
+  text-transform: uppercase;
+  font-size: 24px;
+  text-align:center;
+  margin:auto;
+}
+p{
+  font-size: 18px;
+  line-height: 32px;
+  font-weight: bold;
+  margin: auto;
+  text-align:justify;
+}
+
+#innolab p, #indcity p{
+	width: 1100px;
+}
+.parent p{
+  text-align:justify;
+  font-size: 16px;
+}
+
+/* INNOLAB + INDUSTRY CITY*/
+
+#lab{
+	background: url(../images/idk.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding: 5px;
+  height:450px;
+}
+
+#innolab,#indcity{
+  display:inline-block;
+  border-bottom: 1px solid black;
+  padding: 30px;
+}
+
+#indcity{
+  border:top bottom 3px #EDEDED;
+  margin: 60px 0 60px 0;
+	text-align: center;
+	background-color: rgba(255,255,255,.5);
+}
+
+
+/* PARTNERS */
+
+.logos {
+  padding:25px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+
+}
+
+@media only screen and (max-width: 766px) {
+  .logos {
+    float: none;
+  }
+}
+
+/* FIN SUPPORT + COLLABORATIONS */
+
+.family{
+  display:flex;
+  margin: 0 auto;
+  background-color:#EDEDED;
+  flex-direction:row;
+  align-items: stretch;
+  background-color:#EDEDED;
+  margin:space-between;
+}
+
+.parent-a{
+  flex: 1;
+  padding: 15px;
+  margin-bottom: 15px;
+  margin-top:15px;
+  background-color:#EDEDED;
+}
+
+.parent-b{
+  display:flex;
+  flex:2;
+  padding: 15px;
+  margin-bottom: 15px;
+  margin-top:15px;
+  background-color:#EDEDED;
+  border-left: 1px solid black;
+}
+
+.child-a{
+  flex:1;
+  padding: 10px;
+  background-color:#EDEDED;
+}
+
+.child-b{
+  flex:1;
+  padding: 10px;
+  background-color:#EDEDED;
+}
