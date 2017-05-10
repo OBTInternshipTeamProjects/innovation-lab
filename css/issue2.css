@@ -1,4 +1,5 @@
 /* TEXT and TYPE */
+.content-container{min-height:350px;}
 
 h1{
 	letter-spacing: 9px;
@@ -24,7 +25,8 @@ p{
 }
 
 #innolab p, #indcity p{
-	width: 1100px;
+	width: 100%;
+  padding:0 50px;
 }
 .parent p{
   text-align:justify;
@@ -46,12 +48,11 @@ p{
 #innolab,#indcity{
   display:inline-block;
   border-bottom: 1px solid black;
-  padding: 30px;
 }
 
 #indcity{
-  border:top bottom 3px #EDEDED;
-  margin: 60px 0 60px 0;
+  border-top: 3px solid #EDEDED;
+  border-bottom: 3px solid #EDEDED;
 	text-align: center;
 	background-color: rgba(255,255,255,.5);
 }
@@ -90,7 +91,7 @@ p{
   padding: 15px;
   margin-bottom: 15px;
   margin-top:15px;
-  background-color:#EDEDED;
+  background-color: #EDEDED;
 }
 
 .parent-b{
