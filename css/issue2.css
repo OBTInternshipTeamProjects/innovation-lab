@@ -1,0 +1,85 @@
+
+
+#innolab,#indcity{
+  display:inline-block;
+}
+
+#innolab p, #indcity p{
+	width: 1100px;
+}
+
+#indcity{
+  border:top bottom 3px #EDEDED;
+  margin: 60px 0 60px 0;
+	text-align: center;
+	background-color: rgba(255,255,255,.5);
+}
+
+#lab{
+	background: url(../images/idk.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding: 5px;
+  height:450px;
+}
+
+
+#list-container{
+  display:flex;
+  align-items: stretch;
+  height: 500 px
+  margin: 0 auto;
+}
+
+.list-item{
+	text-align: center;
+	padding: 40px;
+	height: auto;
+  width:200 px;
+  background-color: #EDEDED;
+  padding:10px;
+}
+.list-item h1{
+	font-size: 20px;
+	margin-bottom: 40px;
+	letter-spacing: 9px;
+}
+.list {
+    position:flex;
+    flex: 1;
+}
+
+@media only screen and (max-width: 425px) {
+  .list{
+		width: 300px;
+		left: 50px
+	}
+}
+
+.logos {
+  padding:25px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+
+}
+
+@media only screen and (max-width: 766px) {
+  .logos {
+    float: none;
+  }
+}
+
+.accordion-item.logo{
+  float:center;
+}
+
+.accordion-item h1{
+  text-align:center;
+}
+
+.accordion-item p{
+  text-align:justify;
+}

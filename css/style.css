@@ -3,7 +3,7 @@ body{
 	font-family: 'Raleway', sans-serif;
 }
 #center{
-	margin: 60px 0;
+	margin: 60px 0 60px 0;
 	text-align: center;
 	background-color: rgba(255,255,255,.5);
 }
@@ -28,7 +28,7 @@ p{
 	padding: 20px;
 }
 #about{
-	background: url(../images/enter.jpg) no-repeat center center fixed; 
+	background: url(../images/enter.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -70,10 +70,10 @@ p{
 	margin-bottom: 40px;
 	letter-spacing: 9px;
 }
-#fade-right { 
-    float:left; 
-    position:absolute; 
-    display:none; 
+#fade-right {
+    float:left;
+    position:absolute;
+    display:none;
 }
 #contact{
 	width: 80%;
@@ -157,4 +157,19 @@ footer{
 		width: 300px;
 		left: 50px
 	}
+}
+
+/* The Magic */
+.accordion:active .accordion-item:hover .accordion-item-content,
+.accordion .accordion-item--default .accordion-item-content {
+    height: 340px;
+    padding-top: 30px;
+    display: flex;
+}
+
+.accordion-item-content,
+.accordion:active .accordion-item-content {
+    height: 0;
+    overflow: hidden;
+    transition: height .5s;
 }
