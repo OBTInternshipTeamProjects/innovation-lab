@@ -140,6 +140,41 @@ footer{
 	left: 90%;
 	z-index: 999;
 }
+
+/*Programs page*/
+#info{
+	margin-top: 80px;
+	padding-left: 30px;
+	padding-top: 30px;
+	margin-bottom: 70px;
+
+}
+
+.line{
+	border-bottom: solid 3px;
+	display: table;
+	margin: 0;
+}
+h1.line{
+	margin-bottom: 50px;
+}
+.text{
+	margin-left: 60px;
+}
+.text p{
+	margin: 20px auto;
+}
+.stuff{
+	display: flex;
+}
+
+#categories{
+	width: 300px;
+}
+#youth, #immigrants, #businesses{
+	display: none;
+}
+
 @media only screen and (max-width: 768px) {
 #center p{
 	width: 500px;
