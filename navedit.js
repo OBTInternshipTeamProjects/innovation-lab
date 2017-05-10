@@ -1,16 +1,15 @@
-// Sticky Header
-$(window).scroll(function() {
-
-    if ($(window).scrollTop() > 100) {
-        $('.main_h').addClass('sticky');
-    } else {
-        $('.main_h').removeClass('sticky');
-    }
+$(document).ready(function() {
+    $("#totop").hide(); //hide initially
+    var topOfDiv = $("#programs").offset().top;
+    $(window).scroll(function() {
+        if($(window).scrollTop() > topOfDiv) { //scrolled past the other div?
+            $("#totop").show(200); //reached the desired point -- show div
+        }
+        if($(window).scrollTop() < topOfDiv) { //scrolled past the other div?
+            $("#totop").hide(200); //reached the desired point -- show div
+        }
+    });
 });
-
-
-
-
 // Mobile Navigation
 $('.mobile-toggle').click(function() {
     if ($('.main_h').hasClass('open-nav')) {
@@ -19,14 +18,12 @@ $('.mobile-toggle').click(function() {
         $('.main_h').addClass('open-nav');
     }
 });
-
 $('.main_h li a').click(function() {
     if ($('.main_h').hasClass('open-nav')) {
         $('.navigation').removeClass('open-nav');
         $('.main_h').removeClass('open-nav');
     }
 });
-
 // navigation scroll lijepo radi materem
 $('a').click(function(event) {
     var id = $(this).attr("href");
