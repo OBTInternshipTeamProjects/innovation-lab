@@ -49,6 +49,7 @@ p{
 	padding: 20px;
 	display: flex;
 	flex-wrap: wrap;
+	width: 100%;
 }
 #location h1{
 	letter-spacing: 9px;
@@ -157,4 +158,22 @@ footer{
 		width: 300px;
 		left: 50px
 	}
+}
+#abt h1 {
+	letter-spacing: 9px;
+	text-align: center;
+}
+#about_us {
+	width: 50%;
+	float: left;
+	padding-top: 20px;
+}
+#abt h4, h5 {
+	text-align: -webkit-center;
+	letter-spacing: 1px;
+}
+#abt {
+	text-align: justify;
+	height: 480px;
+	padding-top: 20px;
 }
