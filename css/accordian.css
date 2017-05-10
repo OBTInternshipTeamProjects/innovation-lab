@@ -32,7 +32,6 @@
 }
 .accordion section img {
   position: relative;
-  left: 35%;
 }
 
 .accordion > label:after {
@@ -63,8 +62,20 @@
   margin: 15px 0;
   padding: 0 20px;
   line-height: 1.5;
+  text-align: -webkit-center;
 }
 .accordion p {
   font-size: large;
   font-weight: normal;
+}
+@font-face {
+  font-family: fontawesome;
+  src: url(../fonts/fontawesome.ttf);
+}
+section {
+  text-align: -webkit-center;
+}
+#programs {
+  width: 50%;
+  float: right;
 }
