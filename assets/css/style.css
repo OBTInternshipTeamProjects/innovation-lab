@@ -211,7 +211,12 @@ p{
 #partners{
 	text-align: center;
 	padding: 40px;
+<<<<<<< HEAD:css/style.css
 }
+=======
+	height: 262px;
+} 
+>>>>>>> d850a359ec9c9ac55c0287bcacec501e8631861a:assets/css/style.css
 #partners h1{
 	font-size: 20px;
 	margin-bottom: 40px;
@@ -224,6 +229,16 @@ p{
 	margin: auto;
 	display: flex;
 }
+#contact-input{
+	width: 100%;
+	margin: 0;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	font-size: 24px;
+	padding-top: 20px;
+}
+
 textarea{
 	height: 150px;
 	width: 300px;
@@ -232,12 +247,15 @@ textarea{
 	font-size: 18px;
 }
 #four{
-background-color: #EDEDED;
+	background-color: #EDEDED;
 }
 #four h1{
 	text-align: center;
 	letter-spacing: 9px;
 
+}
+.line-inputs{
+	display: inline-block;
 }
 #left{
 	width: 70%;
@@ -249,19 +267,28 @@ background-color: #EDEDED;
 }
 #right{
 	width: 30%;
+	font-size: 20px;
 }
 
-button{
+#right h2{
+	font-size: 28px;
+}
+
+#button{
 	width: 80px;
 	height: 40px;
 	border: 2px solid #303030;
 	border-radius: 4px;
 	margin-top: 20px;
 	margin-bottom: 20px;
+<<<<<<< HEAD:css/style.css
 	background-color: #EDEDED;
+=======
+	text-align: center;
+>>>>>>> d850a359ec9c9ac55c0287bcacec501e8631861a:assets/css/style.css
 }
 
-button:hover{
+#button:hover{
 	background-color: black;
 	color: white;
 }
