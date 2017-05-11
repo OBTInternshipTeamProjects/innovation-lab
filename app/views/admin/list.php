@@ -1,7 +1,7 @@
 
  
 <h1>Contacts</h1><br><br><br>
-<form action="delete_contacts.php" id="contacts_delete" method="post">
+<form action="delete.php" id="contacts_delete" method="post">
 <table>
 <?php
 	echo "<tr><th>delete</th><th>name</th><th>email</th><th>company</th><th>referrer</th><th>message</th></tr>";

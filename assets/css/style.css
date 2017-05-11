@@ -1,6 +1,11 @@
+@font-face {
+  font-family: fontawesome;
+  src: url(../fonts/fontawesome.ttf);
+}
+
 * {box-sizing: border-box; font-family: 'Raleway', sans-serif;}
 
-body{margin: 0; padding:0;}	
+body,hr{margin: 0; padding:0;}	
 
 a{text-decoration: none;}
 
@@ -99,9 +104,21 @@ a{text-decoration: none;}
 /* End of Header styling */
 
 /* Container Styling*/
-	.content-container{width:100%;min-height:250px; background:linear-gradient(#FFF,#EFEFEF);}
+	.content-container{width:100%;min-height:350px; background:linear-gradient(#FFF,#DDD);}
 	/* First Container Styling - About */
+		.first{padding:0;}
 
+	#about{
+		width:100%;
+		height:350px;
+		background: url(../images/enter.jpg) no-repeat center center fixed;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		opacity:0.75;
+		margin-top: 103px;
+	}
 	/* End of First Container Styling - About*/
 
 	/* Second Container Styling - About + Programs */
@@ -115,20 +132,27 @@ a{text-decoration: none;}
 			#about_us {
 				width: 50%;
 				float: left;
-				padding-top: 20px;
 			}
 			#abt h4, h5 {
+				font-size:14px;
+				padding:0 50px;
 				text-align: -webkit-center;
 				letter-spacing: 1px;
 			}
 			#abt {
 				text-align: justify;
-				height: 480px;
-				padding-top: 20px; 
+				height: 480px; 
 			}
 		/* End of About Us Stylings */
 		/* Programs Stylings */
+			#programs{width:50%;}
+
 			/* The Magic - Accordion Styling */
+				.accordion{
+					transform: translateZ(0);
+					box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+				  background: #fff;
+				}
 				.accordion:active .accordion-item:hover .accordion-item-content,
 				.accordion .accordion-item--default .accordion-item-content {
 				    height: 340px;
@@ -142,6 +166,65 @@ a{text-decoration: none;}
 				    overflow: hidden;
 				    transition: height .5s;
 				}
+
+				.accordion > .accordion-toggle{
+					position: absolute;
+					opacity: 0;
+					display: none;
+				}
+
+				.accordion > label{
+					position: relative;
+					display: block;
+					height: 50px;
+					line-height:1.618;
+					padding: 0 20px;
+					border-top: 1px solid black;
+					border-bottom:none;
+					/*border-top-left-radius:5px;
+					border-top-right-radius:5px;*/
+					background: #DDD;
+					cursor: pointer;
+				}
+				.accordion > label:nth-child(2){border-bottom:1px solid black;}
+				.accordion section img {
+				  position: relative;
+				}
+
+				.accordion > label:after {
+				  content: '\f078';
+				  position: absolute;
+				  top: 0px;
+				  right: 20px;
+				  font-family: fontawesome;
+				  transform: rotate(90deg);
+				  transition: .3s transform;
+				}
+
+				.accordion > section{
+					height: 0;
+					transition: .3s all;
+					overflow: hidden;
+				}
+
+				.accordion > .accordion-toggle:checked ~ label:after{
+				 transform: rotate(0deg);
+				}
+
+				.accordion > .accordion-toggle:checked ~ section{
+				  height: 100%;
+				}
+
+				.accordion > section p {
+				  margin: 15px 0;
+				  padding: 0 20px;
+				  line-height: 1.5;
+				  text-align: -webkit-center;
+				}
+				.accordion p {
+				  font-size: large;
+				  font-weight: normal;
+				}
 			/* End of Accordion Styling */
 
 
@@ -149,6 +232,57 @@ a{text-decoration: none;}
 
 	/* End of Second Container Styling - About + Programs */
 /* End of Container Styling */
+/* Footer Stylings */
+	/* Contact Us Form Stylings */
+		#contact{
+			width: 90%;
+			margin: auto;
+			padding-top:40px;
+			display:flex;
+			flex-wrap:wrap;
+        	justify-content:space-between;
+		}
+		#contact h1{margin:auto;}
+
+		form{width:100%;}
+		
+		.section{
+			width:32%;
+			padding:0 20px;
+			min-height:300px;
+			margin:0 auto;
+			display:inline-flex;
+        	flex-direction: column;
+			border-left:1px solid lightgrey;
+		}
+		.section-left, .section-mid, .section-right{
+
+		}
+		input[type="text"],input[type="email"] {
+			display:block;
+			width:200px;
+			height:30px;
+		}
+		.input-radio{display:inline-flex;}
+		#contact{
+		}
+
+		textarea{
+			height: 150px;
+			width: 300px;
+			max-height: 150px;
+			max-width: 300px;
+			font-size: 18px;
+		}
+	/* End of Contact Us Form Stylings */
+	
+	footer{
+		min-height: 65px;
+		background-color: #333;
+		color: white;
+		text-align: center;
+	}
+/* End of Footer Stylings */
 #center{
 	text-align: center;
 	background-color: rgba(255,255,255,.5);
@@ -169,10 +303,10 @@ p{
 	line-height: 42px;
 	font-weight: bold;
 	margin: auto;
-}
+}/*
 #about,#programs,#location,#four,#partners,footer{
 	padding: 20px;
-}
+}*/
 #about{
 	background: url(../images/enter.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -184,12 +318,15 @@ p{
 #programs img{
 	width: 300px;
 }
+#eh{
+	width:75%;
+	margin:0 auto;
+	text-align: center;
+}
 #eh h1{
 	letter-spacing: 9px;
 }
-#eh{
-	text-align: center;
-}
+
 #location{
 	background-color: #EDEDED;
 	padding: 20px;
@@ -211,12 +348,7 @@ p{
 #partners{
 	text-align: center;
 	padding: 40px;
-<<<<<<< HEAD:css/style.css
-}
-=======
-	height: 262px;
 } 
->>>>>>> d850a359ec9c9ac55c0287bcacec501e8631861a:assets/css/style.css
 #partners h1{
 	font-size: 20px;
 	margin-bottom: 40px;
@@ -224,28 +356,7 @@ p{
 }
 #fade-right {
 }
-#contact{
-	width: 80%;
-	margin: auto;
-	display: flex;
-}
-#contact-input{
-	width: 100%;
-	margin: 0;
-	display: flex;
-	justify-content: space-around;
-	flex-wrap: wrap;
-	font-size: 24px;
-	padding-top: 20px;
-}
 
-textarea{
-	height: 150px;
-	width: 300px;
-	max-height: 150px;
-	max-width: 300px;
-	font-size: 18px;
-}
 #four{
 	background-color: #EDEDED;
 }
@@ -257,14 +368,7 @@ textarea{
 .line-inputs{
 	display: inline-block;
 }
-#left{
-	width: 70%;
-	display: flex;
-	justify-content: space-around;
-	flex-wrap: wrap;
-	font-size: 24px;
-	padding-top: 20px;
-}
+
 #right{
 	width: 30%;
 	font-size: 20px;
@@ -281,11 +385,8 @@ textarea{
 	border-radius: 4px;
 	margin-top: 20px;
 	margin-bottom: 20px;
-<<<<<<< HEAD:css/style.css
 	background-color: #EDEDED;
-=======
 	text-align: center;
->>>>>>> d850a359ec9c9ac55c0287bcacec501e8631861a:assets/css/style.css
 }
 
 #button:hover{
@@ -348,6 +449,50 @@ h1.line{
 #youth, #immigrants, #businesses{
 	display: none;
 }
+
+/* NASTASSIA STYLING */
+		
+	.family{
+	  display:flex;
+	  margin: 0 auto;
+	  background-color:#EDEDED;
+	  flex-direction:row;
+	  align-items: stretch;
+	  background-color:#EDEDED;
+	  margin:space-between;
+	}
+
+	.parent-a{
+	  flex: 1;
+	  padding: 15px;
+	  margin-bottom: 15px;
+	  margin-top:15px;
+	  background-color: #EDEDED;
+	}
+
+	.parent-b{
+	  display:flex;
+	  flex:2;
+	  padding: 15px;
+	  margin-bottom: 15px;
+	  margin-top:15px;
+	  background-color:#EDEDED;
+	  border-left: 1px solid black;
+	}
+
+	.child-a{
+	  flex:1;
+	  padding: 10px;
+	  background-color:#EDEDED;
+	}
+
+	.child-b{
+	  flex:1;
+	  padding: 10px;
+	  background-color:#EDEDED;
+	}
+
+/* END OF NASTASSIA STYLING */
 
 @media only screen and (max-width: 768px) {
 	.main_h {
