@@ -159,6 +159,9 @@ footer{
 h1.line{
 	margin-bottom: 50px;
 }
+h1.line:hover{
+	cursor: pointer;
+}
 .text{
 	width: 100%;
 padding-left: 30px;
