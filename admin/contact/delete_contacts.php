@@ -19,13 +19,11 @@ if (isset($_GET['email'])) {
 	$deletePage = $db->prepare("
 		DELETE FROM contact
 		WHERE email = :email
+
 	");
 
 	$deletePage->execute(['email' => $_GET['email']]);
-	
 }
-	header('Location: index.php');
-	die();
- 
+
 ?>
 

@@ -6,6 +6,9 @@
     $company = $_POST['company'];
     $referred = $_POST['referrer'];
     $message = $_POST['message'];
+	if(!$referred){
+		$referred = "none";
+	}
     
     $unique = $db->prepare('SELECT * FROM contact WHERE email = :email ');
     $unique->bindParam(":email" , $email);
@@ -38,17 +41,17 @@
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" id="contact-input" method="post">
           <section class="section-left section">
             <div class="input-name sl">
-              <label for="name">Name:</label> <input type="text" name="name">
+              <label for="name">Name:</label> <input type="text" name="name" required>
             </div>
             <br>
             <div class="input-email sl">
-              <label for="email">E-mail:</label> <input type="email" name="email">
+              <label for="email">E-mail:</label> <input type="email" name="email" required>
             </div>
           </section>
           <section class="section-mid section">
-             Company: <input type="text" name="company">
+             Company: <input type="text" name="company" required>
               <br>
-              <label for="#phone-input">Phone number</label> <input id="phone-input" name="phone_number" type="tel" value="" aria-label="Please enter your phone number" placeholder="ex. 1(111)-111-1111">
+              <label for="#phone-input" >Phone number</label> <input id="phone-input" name="phone_number" type="tel" value="" aria-label="Please enter your phone number" placeholder="ex. 1(111)-111-1111" required>
               <br>
               How did you hear about us?
               <br>
@@ -61,7 +64,7 @@
           </section>
           <section class="section-right section">
             <h2>An opportunity awaits!</h2>
-            Message: <textarea name="message"></textarea>
+            Message: <textarea name="message" required></textarea>
             <br>
             <input id="button" name="submit" type="submit" value="SEND"/>
           </section>
