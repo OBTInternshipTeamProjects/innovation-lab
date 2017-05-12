@@ -55,6 +55,7 @@ p{
 }
 #info{
 	margin: auto;
+
 }
 #map{
 	width: 600px;
@@ -142,12 +143,12 @@ footer{
 }
 
 /*Programs page*/
-#info{
+#main{
 	margin-top: 80px;
 	padding-left: 30px;
 	padding-top: 30px;
-	margin-bottom: 70px;
-
+	margin-bottom: 40px;
+	height: 708px;
 }
 
 .line{
@@ -159,10 +160,23 @@ h1.line{
 	margin-bottom: 50px;
 }
 .text{
-	margin-left: 60px;
+	width: 100%;
+padding-left: 30px;
 }
 .text p{
 	margin: 20px auto;
+}
+
+.text img{
+	width: 300px;
+	margin-bottom: 25px;
+}
+
+.pics{
+	width: 300px;
+	float: right;
+	margin-right: 45px;
+	padding-left: 20px;
 }
 .stuff{
 	display: flex;
