@@ -1,9 +1,155 @@
-body{
-	margin: 0;
-	font-family: 'Raleway', sans-serif;
-}
+* {box-sizing: border-box; font-family: 'Raleway', sans-serif;}
+
+body{margin: 0; padding:0;}	
+
+a{text-decoration: none;}
+
+/* Header Styling */
+	.main_h {
+		position: fixed;
+		max-height: 70px;
+		z-index: 999;
+		width: 100%;
+		padding-top: 17px;
+		background: none;
+		overflow: hidden;
+		-webkit-transition: all 0.3s;
+		transition: all 0.3s;
+		padding-bottom: 6px;
+		font-weight: bold;
+		background-color: rgba(255, 255, 255, 0.93);
+		opacity: 1;
+		top: 0px;
+		border-bottom: 1px solid gainsboro;
+	}
+
+	.open-nav {
+		max-height: 400px !important;
+	}
+	.open-nav .mobile-toggle {
+		transform: rotate(-90deg);
+		-webkit-transform: rotate(-90deg);
+	}
+
+	.logo {
+		font-size: 25px;
+		color: black;
+		text-transform: uppercase;
+		float: left;
+		display: block;
+		margin-top: 0;
+		line-height: 1;
+		margin-bottom: 10px;
+		border: 3px solid;
+		padding: 5px;
+	}
+	nav {
+  		float: right;
+  		width: 60%;
+	}
+	nav ul {
+		list-style: none;
+		overflow: hidden;
+		text-align: right;
+		float: right;
+	}
+	nav ul li {
+		display: inline-block;
+		margin-left: 35px;
+		line-height: 1.5;
+	}
+	nav ul a {
+		color: black;
+		text-transform: uppercase;
+		font-size: 16px;
+	}
+
+	.mobile-toggle {
+		display: none;
+		cursor: pointer;
+		font-size: 20px;
+		position: absolute;
+		right: 22px;
+		top: 0;
+		width: 30px;
+		-webkit-transition: all 200ms ease-in;
+		-moz-transition: all 200ms ease-in;
+		transition: all 200ms ease-in;
+	}
+	.mobile-toggle span {
+		width: 30px;
+		height: 4px;
+		margin-bottom: 6px;
+		border-radius: 1000px;
+		background: #8f8f8f;
+		display: block;
+	}
+
+	.row {
+		width: 100%;
+		max-width: 940px;
+		margin:0 auto;
+		position: relative;
+		padding:0 2%;
+	}
+	#tall{
+		height: 2000px;
+		background-color: lavenderblush;
+	}
+/* End of Header styling */
+
+/* Container Styling*/
+	.content-container{width:100%;min-height:250px; background:linear-gradient(#FFF,#EFEFEF);}
+	/* First Container Styling - About */
+
+	/* End of First Container Styling - About*/
+
+	/* Second Container Styling - About + Programs */
+		.second-container{width:50%;display:inline-flex; border-right:1px solid lightgrey;}
+
+		/* About Us Stylings */
+			#abt h1 {
+				letter-spacing: 9px;
+				text-align: center;
+			}
+			#about_us {
+				width: 50%;
+				float: left;
+				padding-top: 20px;
+			}
+			#abt h4, h5 {
+				text-align: -webkit-center;
+				letter-spacing: 1px;
+			}
+			#abt {
+				text-align: justify;
+				height: 480px;
+				padding-top: 20px; 
+			}
+		/* End of About Us Stylings */
+		/* Programs Stylings */
+			/* The Magic - Accordion Styling */
+				.accordion:active .accordion-item:hover .accordion-item-content,
+				.accordion .accordion-item--default .accordion-item-content {
+				    height: 340px;
+				    padding-top: 30px;
+				    display: flex;
+				}
+
+				.accordion-item-content,
+				.accordion:active .accordion-item-content {
+				    height: 0;
+				    overflow: hidden;
+				    transition: height .5s;
+				}
+			/* End of Accordion Styling */
+
+
+		/* End of Programs Stylings */
+
+	/* End of Second Container Styling - About + Programs */
+/* End of Container Styling */
 #center{
-	margin: 60px 0;
 	text-align: center;
 	background-color: rgba(255,255,255,.5);
 }
@@ -28,7 +174,7 @@ p{
 	padding: 20px;
 }
 #about{
-	background: url(../images/enter.jpg) no-repeat center center fixed; 
+	background: url(../images/enter.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -49,6 +195,7 @@ p{
 	padding: 20px;
 	display: flex;
 	flex-wrap: wrap;
+	width: 100%;
 }
 #location h1{
 	letter-spacing: 9px;
@@ -64,17 +211,13 @@ p{
 #partners{
 	text-align: center;
 	padding: 40px;
-	height: 262px;
 }
 #partners h1{
 	font-size: 20px;
 	margin-bottom: 40px;
 	letter-spacing: 9px;
 }
-#fade-right { 
-    float:left; 
-    position:absolute; 
-    display:none; 
+#fade-right {
 }
 #contact{
 	width: 80%;
@@ -160,9 +303,13 @@ h1.line{
 }
 .text{
 	margin-left: 60px;
+	min-height:500px;
+	line-height:1.618;
 }
 .text p{
-	margin: 20px auto;
+	margin: 5px auto;
+	font-size:16px;
+	line-height:1.618;
 }
 .stuff{
 	display: flex;
@@ -176,12 +323,36 @@ h1.line{
 }
 
 @media only screen and (max-width: 768px) {
-#center p{
-	width: 500px;
-}
-#logo{
-	width: 140px;
-}
+	.main_h {
+		padding-top: 25px;
+	}
+	#center p{
+		width: 500px;
+	}
+	#logo{
+		width: 140px;
+	}  
+	.logo {
+    	float: none;
+  	}   
+  	nav {
+    	width: 100%;
+  	}
+  	nav ul {
+	    padding-top: 10px;
+	    margin-bottom: 22px;
+	    float: left;
+	    text-align: center;
+	    width: 100%;
+  	}  
+	nav ul li {
+		width: 100%;
+		padding: 7px 0;
+		margin: 0;
+	}
+	.mobile-toggle {
+		display: block;
+	}
 }
 @media only screen and (max-width: 425px) {
 	#center p{
@@ -193,3 +364,4 @@ h1.line{
 		left: 50px
 	}
 }
+
