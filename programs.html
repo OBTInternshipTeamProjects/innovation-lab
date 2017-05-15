@@ -40,7 +40,7 @@
 <div id="main">
   <div class="stuff">
     <div id="categories">
-    <h1 id="first" class="line">Adults</h1>
+    <h1 id="first" class="line current">Adults</h1>
     <h1 id="second" class="line">Youth</h1>
     <h1 id="third" class="line">Immigrants</h1>
     <h1 id="fourth" class="line">Businesses</h1>
@@ -91,27 +91,27 @@
 <script>
     $("#first").click(function(){
         $("#adults").show();
-        $("#youth").hide();
-        $("#immigrants").hide();
-        $("#businesses").hide();
+        $("#youth, #immigrants, #businesses").hide();
+        $("#first").addClass("current");
+        $("#second, #third, #fourth").removeClass("current");
     });
     $("#second").click(function(){
-        $("#adults").hide();
         $("#youth").show();
-        $("#immigrants").hide();
-        $("#businesses").hide();
+        $("#adults, #immigrants, #businesses").hide();
+        $("#second").addClass("current");
+        $("#first, #third, #fourth").removeClass("current");
     });
     $("#third").click(function(){
-        $("#adults").hide();
-        $("#youth").hide();
         $("#immigrants").show();
-        $("#businesses").hide();
+        $("#adults, #youth, #businesses").hide();
+        $("#third").addClass("current");
+        $("#first, #second, #fourth").removeClass("current");
     });
     $("#fourth").click(function(){
-        $("#adults").hide();
-        $("#youth").hide();
-        $("#immigrants").hide();
+        $("#adults, #youth, #immigrants").hide();
         $("#businesses").show();
+        $("#fourth").addClass("current");
+        $("#first, #second, #third").removeClass("current");
     });
 </script>
 

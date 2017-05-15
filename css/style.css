@@ -300,11 +300,17 @@ footer{
 }
 h1.line{
 	padding: 30px;
-	background-color: #f2f2f2;
 }
 h1.line:hover{
 	cursor: pointer;
 	background-color: #e6e6e6;
+}
+.current{
+	color: white;
+	background-color: black;
+}
+h1.current:hover{
+background-color: black;
 }
 .text{
 	width: 100%;
@@ -331,7 +337,8 @@ h2.line{
 }
 
 #categories{
-	border-right: solid;
+	border-right: solid 4px;
+	height: 100vh;
 
 }
 #youth, #immigrants, #businesses{
