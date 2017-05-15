@@ -1,15 +1,3 @@
-// Sticky Header
-$(window).scroll(function() {
-
-    if ($(window).scrollTop() > 100) {
-        $('.main_h').addClass('sticky');
-    } else {
-        $('.main_h').removeClass('sticky');
-    }
-});
-
-
-
 
 // Mobile Navigation
 $('.mobile-toggle').click(function() {
@@ -34,6 +22,6 @@ $('a').click(function(event) {
     var target = $(id).offset().top - offset;
     $('html, body').animate({
         scrollTop: target
-    }, 500);
+    }, 100);
     event.preventDefault();
 });

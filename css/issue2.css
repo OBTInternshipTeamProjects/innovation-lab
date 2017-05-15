@@ -42,20 +42,40 @@ p{
   padding: 5px;
   height:450px;
 }
+#labpic{
+	background: url(../INNOLAB/teaching.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding: 5px;
+  height:400px;
+}
+#icpic{
+	background: url(../images/iclights.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding: 5px;
+  height:400px;
+}
 
-#innolab,#indcity{
+#innolab{
   display:inline-block;
-  border-bottom: 1px solid black;
-  padding: 30px;
+	padding: 40px;
 }
 
 #indcity{
+	display:inline-block;
   border:top bottom 3px #EDEDED;
-  margin: 60px 0 60px 0;
+	padding: 40px;
 	text-align: center;
 	background-color: rgba(255,255,255,.5);
 }
-
+ img{
+	 max-width: 1100px;
+ }
 
 /* PARTNERS */
 
@@ -87,7 +107,8 @@ p{
 
 .parent-a{
   flex: 1;
-  padding: 15px;
+  padding: 25px;
+	padding-right: 5px;
   margin-bottom: 15px;
   margin-top:15px;
   background-color:#EDEDED;
@@ -96,7 +117,7 @@ p{
 .parent-b{
   display:flex;
   flex:2;
-  padding: 15px;
+  padding: 25px;
   margin-bottom: 15px;
   margin-top:15px;
   background-color:#EDEDED;
@@ -105,12 +126,12 @@ p{
 
 .child-a{
   flex:1;
-  padding: 10px;
+  padding: 20px;
   background-color:#EDEDED;
 }
 
 .child-b{
   flex:1;
-  padding: 10px;
+  padding: 20px;
   background-color:#EDEDED;
 }
