@@ -1,6 +1,15 @@
+<<<<<<< HEAD
 * {
   margin: 0;
   padding: 0;
+=======
+/* The Magic */
+.accordion:hover .accordion-item:hover .accordion-item-content,
+.accordion .accordion-item--default .accordion-item-content {
+    height: 240px;
+    padding-top: 10px;
+    display: flex;
+>>>>>>> issue2
 }
 
 *, *:before, *:after {
@@ -14,10 +23,17 @@
   background: #fff;
 }
 
+<<<<<<< HEAD
 .accordion > .accordion-toggle{
 	position: absolute;
 	opacity: 0;
 	display: none;
+=======
+.accordion .accordion-item {
+
+  border-bottom: 1px solid #666;
+  padding: 1em;
+>>>>>>> issue2
 }
 
 .accordion > label{
@@ -44,10 +60,15 @@
   transition: .3s transform;
 }
 
+<<<<<<< HEAD
 .accordion > section{
 	height: 0;
 	transition: .3s all;
 	overflow: hidden;
+=======
+.accordion p{
+  padding-right: 32px;
+>>>>>>> issue2
 }
 
 .accordion > .accordion-toggle:checked ~ label:after{
@@ -58,6 +79,7 @@
   height: 100%;
 }
 
+<<<<<<< HEAD
 .accordion > section p {
   margin: 15px 0;
   padding: 0 20px;
@@ -79,3 +101,10 @@ section {
   width: 50%;
   height:auto;
 }
+=======
+@media only screen and (max-width: 425px) {
+  .accordion{
+    width: 100%;
+  }
+}
+>>>>>>> issue2

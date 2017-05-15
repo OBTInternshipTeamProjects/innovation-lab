@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 $(document).ready(function() {
     $("#totop").hide(); //hide initially
     var topOfDiv = $("#programs").offset().top;
@@ -10,6 +11,9 @@ $(document).ready(function() {
         }
     });
 });
+=======
+
+>>>>>>> issue2
 // Mobile Navigation
 $('.mobile-toggle').click(function() {
     if ($('.main_h').hasClass('open-nav')) {
@@ -31,6 +35,6 @@ $('a').click(function(event) {
     var target = $(id).offset().top - offset;
     $('html, body').animate({
         scrollTop: target
-    }, 500);
+    }, 100);
     event.preventDefault();
 });
