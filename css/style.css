@@ -376,10 +376,17 @@ h2.line{
 
 	/******Programs page******/
 	h1.line{
-		font-size: 25px;
+		font-size: 22px;
+		padding: 25px;
 	}
 	#main{
 		height: 1020px;
+	}
+	.pics, .text img{
+		width: 200px;
+	}
+	.text p{
+		font-size: 18px;
 	}
 }
 @media only screen and (max-width: 425px) {
