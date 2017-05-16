@@ -65,6 +65,7 @@ p{
 
 #innolab{
   display:inline-block;
+<<<<<<< HEAD
   border-bottom: 1px solid black;
 }
 
@@ -79,6 +80,14 @@ p{
 #indcity{
 	display:inline-block;
   border:top bottom 3px #EDEDED;
+=======
+	padding: 40px;
+}
+
+#indcity{
+	display:inline-block;
+  border:top bottom 3px #EDEDED;
+>>>>>>> issue2
 	padding: 40px;
 	text-align: center;
 	background-color: rgba(255,255,255,.5);

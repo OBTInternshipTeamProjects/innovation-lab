@@ -3,31 +3,17 @@
   max-height: 70px;
   z-index: 999;
   width: 100%;
-  padding-top: 17px;
+  padding: 17px 0 6px;
   background: hidden;
   overflow: visible;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-<<<<<<< HEAD
-=======
-  opacity: 0;
-  top: -200px;
->>>>>>> issue2
-  padding-bottom: 6px;
   font-weight: bold;
-  background-color: rgba(255, 255, 255, 0.93);
-  opacity: 1;
+  background-color: rgba(255, 255, 255, 1);
   top: 0px;
   border-bottom: 1px solid gainsboro;
-<<<<<<< HEAD
-=======
 }
-@media only screen and (max-width: 766px) {
-  .main_h {
-    padding-top: 25px;
-  }
->>>>>>> issue2
-}
+
 
 .open-nav {
   max-height: 400px !important;
@@ -37,10 +23,6 @@
   -webkit-transform: rotate(-90deg);
 }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> issue2
 .logo {
   font-size: 25px;
   color: black;
@@ -58,17 +40,11 @@ nav {
   float: right;
   width: 60%;
 }
-@media only screen and (max-width: 766px) {
- 
-}
 nav ul {
   list-style: none;
   overflow: hidden;
   text-align: right;
   float: right;
-}
-@media only screen and (max-width: 766px) {
-
 }
 nav ul li {
   display: inline-block;
@@ -120,8 +96,14 @@ a {
 }
 
 
-
 #tall{
   height: 2000px;
   background-color: lavenderblush;
+}
+
+
+@media only screen and (max-width: 766px) {
+  .main_h {
+    padding-top: 25px;
+  }
 }
