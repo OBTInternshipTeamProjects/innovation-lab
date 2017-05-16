@@ -1,4 +1,5 @@
 /* TEXT and TYPE */
+* {box-sizing: border-box; font-family: 'Raleway', sans-serif;}
 
 h1{
 	letter-spacing: 9px;
@@ -40,7 +41,7 @@ p{
   -o-background-size: cover;
   background-size: cover;
   padding: 5px;
-  height:450px;
+  height:500px;
 }
 #labpic{
 	background: url(../INNOLAB/teaching.jpg) no-repeat center center fixed;
@@ -63,7 +64,7 @@ p{
 
 #innolab{
   display:inline-block;
-  border-bottom: 1px solid black;
+  padding: 40px;
 }
 
 #indcity{
@@ -86,7 +87,6 @@ p{
   margin-right: auto
 
 }
-
 
 /* FIN SUPPORT + COLLABORATIONS */
 
@@ -136,3 +136,55 @@ p{
     float: none;
   }
 }
+
+
+/* Accordion Features */
+
+/*Original*/
+
+.accordion:hover .accordion-item:hover .accordion-item-content,
+.accordion .accordion-item--default .accordion-item-content {
+    height: 340px;
+    padding-top: 30px;
+    display: flex;
+}
+
+.accordion-item-content,
+.accordion:hover .accordion-item-content {
+    height: 0;
+    overflow: hidden;
+    transition: height .5s;
+}
+
+.accordion {
+    padding: 0;
+    margin: 60px auto;
+    width: 1100px;
+}
+
+.accordion .accordion-item {
+
+  border-bottom: 1px solid #666;
+  padding: 1em;
+}
+
+.accordion h1 {
+  margin: 0;
+}
+
+.accordion p{
+  padding-right: 32px;
+}
+
+@media only screen and (max-width: 768px) {
+  .accordion {
+    width: 700px;
+}
+}
+
+@media only screen and (max-width: 425px) {
+  .accordion{
+    width: 100%;
+  }
+}
+/* Zeroing Out The Bad Code */
