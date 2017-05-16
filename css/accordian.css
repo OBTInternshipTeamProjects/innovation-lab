@@ -1,12 +1,19 @@
-* {
-  margin: 0;
+*, *:before, *:after {
+  box-sizing: border-box;  margin: 0;
   padding: 0;
 }
 
-*, *:before, *:after {
-  box-sizing: border-box;
+@font-face {
+  font-family: fontawesome;
+  src: url(../fonts/fontawesome.ttf);
 }
-
+/* The Magic */
+.accordion:hover .accordion-item:hover .accordion-item-content,
+.accordion .accordion-item--default .accordion-item-content {
+    height: 240px;
+    padding-top: 10px;
+    display: flex;
+}
 
 .accordion{
 	transform: translateZ(0);
@@ -19,6 +26,11 @@
 	opacity: 0;
 	display: none;
 }
+.accordion .accordion-item {
+
+  border-bottom: 1px solid #666;
+  padding: 1em;
+}
 
 .accordion > label{
 	position: relative;
@@ -29,6 +41,11 @@
 	border-top: 1px solid black;
 	background: antiquewhite;
 	cursor: pointer;
+}
+.accordion > section{
+  height: 0;
+  transition: .3s all;
+  overflow: hidden;
 }
 .accordion section img {
   position: relative;
@@ -44,10 +61,9 @@
   transition: .3s transform;
 }
 
-.accordion > section{
-	height: 0;
-	transition: .3s all;
-	overflow: hidden;
+
+.accordion p{
+  padding-right: 32px;
 }
 
 .accordion > .accordion-toggle:checked ~ label:after{
@@ -68,14 +84,17 @@
   font-size: large;
   font-weight: normal;
 }
-@font-face {
-  font-family: fontawesome;
-  src: url(../fonts/fontawesome.ttf);
-}
+
 section {
   text-align: -webkit-center;
 }
 #programs {
   width: 50%;
   height:auto;
+}
+
+@media only screen and (max-width: 425px) {
+  .accordion{
+    width: 100%;
+  }
 }
