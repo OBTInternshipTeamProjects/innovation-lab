@@ -8,17 +8,17 @@
   src: url(../fonts/fontawesome.ttf);
 }
 /* The Magic */
+.accordion{
+  transform: translateZ(0);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  background: #fff;
+}
+
 .accordion:hover .accordion-item:hover .accordion-item-content,
 .accordion .accordion-item--default .accordion-item-content {
     height: 240px;
     padding-top: 10px;
     display: flex;
-}
-
-.accordion{
-	transform: translateZ(0);
-	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-  background: #fff;
 }
 
 .accordion > .accordion-toggle{
@@ -31,7 +31,6 @@
   border-bottom: 1px solid #666;
   padding: 1em;
 }
-
 .accordion > label{
 	position: relative;
 	display: block;
@@ -50,7 +49,6 @@
 .accordion section img {
   position: relative;
 }
-
 .accordion > label:after {
   content: '\f078';
   position: absolute;
@@ -61,11 +59,9 @@
   transition: .3s transform;
 }
 
-
 .accordion p{
   padding-right: 32px;
 }
-
 .accordion > .accordion-toggle:checked ~ label:after{
  transform: rotate(0deg);
 }

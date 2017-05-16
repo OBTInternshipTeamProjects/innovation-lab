@@ -1,16 +1,15 @@
-
-// $(document).ready(function() {
-//     $("#totop").hide(); //hide initially
-//     var topOfDiv = $("#programs").offset().top;
-//     $(window).scroll(function() {
-//         if($(window).scrollTop() > topOfDiv) { //scrolled past the other div?
-//             $("#totop").show(200); //reached the desired point -- show div
-//         }
-//         if($(window).scrollTop() < topOfDiv) { //scrolled past the other div?
-//             $("#totop").hide(200); //reached the desired point -- show div
-//         }
-//     });
-// });
+$(document).ready(function() {
+    $("#totop").hide(); //hide initially
+    var topOfDiv = $("#programs").offset().top;
+    $(window).scroll(function() {
+        if($(window).scrollTop() > topOfDiv) { //scrolled past the other div?
+            $("#totop").show(200); //reached the desired point -- show div
+        }
+        if($(window).scrollTop() < topOfDiv) { //scrolled past the other div?
+            $("#totop").hide(200); //reached the desired point -- show div
+        }
+    });
+});
 // Mobile Navigation
 $('.mobile-toggle').click(function() {
     if ($('.main_h').hasClass('open-nav')) {
