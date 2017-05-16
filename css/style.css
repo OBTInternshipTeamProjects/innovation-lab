@@ -223,7 +223,27 @@ p{
 #contact{
 	width: 80%;
 	margin: auto;
-	display: flex;
+	display: inline-block;
+}
+#contact h1{
+	margin: 30px;
+}
+#info {
+	display: -webkit-inline-box;
+	margin-right:35%;
+	margin-left:30px;
+	width:50%;
+}
+form {
+	display: -webkit-inline-box;
+}
+#listen {
+	display: -webkit-box;
+	width: 100%;
+	margin:auto;
+}
+#message {
+	margin:inherit;
 }
 textarea{
 	height: 150px;
@@ -399,4 +419,3 @@ h2.line{
 		left: 50px
 	}
 }
-
