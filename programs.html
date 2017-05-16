@@ -3,7 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
   <title>Innovation Lab</title>
   
   <link rel="stylesheet" type="text/css" href="css/navedit.css">
@@ -35,68 +37,82 @@
     </div> <!-- / row -->
 
 </header>
-<div id="info">
+<div id="main">
   <div class="stuff">
     <div id="categories">
-    <h1 id="first" class="line" onclick="">Adults</h1>
-    <h1 id="second" class="line" onclick="">Youth</h1>
-    <h1 id="third" class="line" onclick="">Immigrants</h1>
-    <h1 id="fourth" class="line" onclick="">Businesses</h1>
+    <h1 id="first" class="line current">Adults</h1>
+    <h1 id="second" class="line">Youth</h1>
+    <h1 id="third" class="line">Immigrants</h1>
+    <h1 id="fourth" class="line">Businesses</h1>
     </div>
     <div class="text">
       <div id="adults">
-        <h2 class="line">Resume Assistance</h2> 
+        <div class="pics">
+            <img src="images/innovation-lab/IMG_2173.jpg">
+            <img src="images/innovation-lab/2014-03-26-Industry-City-0040-7513%20copy.jpg">
+          </div>
+        <h2 class="title">Resume Assistance</h2> 
           <p>For all those on the job search, stop in and have your resume spruced up!</p> 
-        <h2 class="line">Workshops &amp; Events</h2>
+        <h2 class="title">Workshops &amp; Events</h2>
           <p>Regularly scheduled workshops include Interviewing Basics, LinkedIn Basics, and Upgrade Your Workplace Skills</p>
-        <h2 class="line">Job Placement</h2>
-          <p>Bring in your resume and discuss opportunities</p>
-        <h2 class="line">Career Workshops &amp; Events</h2> 
+        <h2 class="title">Job Placement</h2>
+          <p>Bring in your resume and discuss opportunities</p>  
+        <h2 class="title">Career Workshops &amp; Events</h2> 
           <p>Regularly scheduled workshops include Interviewing Basics, LinkedIn Basics, and Upgrade Your Workplace Skills</p>
-      </div>
+      </div><!--end adults-->
       <div id="youth">
-        <h2 class="line">Web &amp; Coding Fundamentals</h2>
+        <div class="pics">
+            <img src="file:///C:/Users/test/Desktop/innovation-lab/images/innovation-lab/Innovation_Lab_1566.jpg">
+            <img src="images/innovation-lab/IMG_2169%20copy.jpg">
+          </div>
+        <h2 class="title">Web &amp; Coding Fundamentals</h2>
           <p>Youth Participants will learn various programming languages such as HTML, CSS, GIT, introduction to JavaScript, JQuery, Mobile response, PHP and MYSQL.</p>
-      </div>
+      </div><!--end youth-->
       <div id="immigrants">
-        <h2 class="line">Citizenship</h2>
+        <div class="pics">
+            <img src="images/innovation-lab/DSC02364.jpg">
+          </div>
+        <h2 class="title">Citizenship</h2>
           <p>U.S Citizenship Exam Preparation Classes</p>
-        <h2 class="line">ESOL</h2> 
+        <h2 class="title">ESOL</h2> 
           <p>For non-native speakers to improve listening, speaking, reading and writing.</p>
-      </div>
+      </div><!--end immigrants-->
       <div id="businesses">
-        <h2 class="line">Plan For Growth</h2>
+        <div class="pics">
+            <img src="images/innovation-lab/Industry%20City%202013-197%20(2)%20copy.jpg">
+            <img src="images/innovation-lab/IMG_2178.jpg">
+          </div>
+        <h2 class="title">Plan For Growth</h2>
           <p>Small business development workshop</p>
-      </div>
-    </div>
-  </div>
+      </div><!--end businesses-->
+    </div><!--end text-->
+  </div><!--end stuff-->
 </div>
 <script>
     $("#first").click(function(){
         $("#adults").show();
-        $("#youth").hide();
-        $("#immigrants").hide();
-        $("#businesses").hide();
+        $("#youth, #immigrants, #businesses").hide();
+        $("#first").addClass("current");
+        $("#second, #third, #fourth").removeClass("current");
     });
     $("#second").click(function(){
-        $("#adults").hide();
         $("#youth").show();
-        $("#immigrants").hide();
-        $("#businesses").hide();
+        $("#adults, #immigrants, #businesses").hide();
+        $("#second").addClass("current");
+        $("#first, #third, #fourth").removeClass("current");
     });
     $("#third").click(function(){
-        $("#adults").hide();
-        $("#youth").hide();
         $("#immigrants").show();
-        $("#businesses").hide();
+        $("#adults, #youth, #businesses").hide();
+        $("#third").addClass("current");
+        $("#first, #second, #fourth").removeClass("current");
     });
     $("#fourth").click(function(){
-        $("#adults").hide();
-        $("#youth").hide();
-        $("#immigrants").hide();
+        $("#adults, #youth, #immigrants").hide();
         $("#businesses").show();
+        $("#fourth").addClass("current");
+        $("#first, #second, #third").removeClass("current");
     });
-
 </script>
 
   <footer>&copy; Innovation Lab 2017 | Developed by Veronica C.</footer>
