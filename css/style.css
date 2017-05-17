@@ -64,6 +64,10 @@ a{text-decoration: none;}
 		font-size: 16px;
 	}
 
+	#active{
+		color: #1A81CB;
+	}
+
 	.mobile-toggle {
 		display: none;
 		cursor: pointer;
@@ -288,6 +292,7 @@ footer{
 /******Programs page******/
 #main{
 	padding-top: 110px;
+	margin-bottom: 80px;
 }
 
 .title{
@@ -338,6 +343,9 @@ h2.line{
 	height: 500px;
 }
 #youth, #immigrants, #businesses{
+	display: none;
+}
+.small{
 	display: none;
 }
 /******END Programs page******/
@@ -395,23 +403,39 @@ h2.line{
 		left: 50px
 	}
 	/******Programs page******/
-	#main{
-		height: 100vh;
-	}
 	.stuff{
 		display: inherit;
 	}
 	#categories{
 		display: flex;
-		width: 880px;
+		width: 100%;
 		height: initial;
-		margin: 0 auto 50px;
+		margin: auto;
+		border-right: none;
+		border-bottom: solid 4px #1A81CB;
 	}
 	h1.line{
 		font-size: 15px;
-		padding: 10px;
+		padding: 12px 5px;
+		margin: auto;
+	}
+	.text{
+		padding-left: 0;
+		height: 1270px;
+	}
+	.title, .text p{
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+	.pics{
+		display: none;
 	}
 	.text img{
-		width: 150px;
+		width: 100%;
+		margin: 0;
 	}	
+	.small{
+		display: block;
+		padding: 30px 0;
+	}
 }
