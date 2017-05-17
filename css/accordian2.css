@@ -12,6 +12,9 @@
   transform: translateZ(0);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   background: #fff;
+  padding: 0;
+  width: auto;
+  margin:0;
 }
 
 .accordion:hover .accordion-item:hover .accordion-item-content,
