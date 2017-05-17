@@ -1,6 +1,6 @@
 $(document).ready(function() {
     $("#totop").hide(); //hide initially
-    var topOfDiv = $("#programs").offset().top;
+    var topOfDiv = $("#partners").offset().top;
     $(window).scroll(function() {
         if($(window).scrollTop() > topOfDiv) { //scrolled past the other div?
             $("#totop").show(200); //reached the desired point -- show div
